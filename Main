@@ -1,6 +1,6 @@
 # MazeSolver
 
-
+    // Initializes Pins
 int directionPinRight = 2;
 int directionPinLeft = 7;
 int pwmPin = 5;
@@ -61,7 +61,8 @@ void loop() {
       }
     }
 }
-
+  
+  
 void inchesToTravel(int x) {
   
   return;
@@ -120,6 +121,7 @@ double GetDistance(int directions) {
  
   //Serial.println(distance);
   }
+  
   else if (directions == RIGHT) {
   digitalWrite(trigger2,LOW);
   
