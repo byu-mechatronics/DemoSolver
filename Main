@@ -1,6 +1,6 @@
 # MazeSolver
 
-    // Initializes Pins
+    //Initialize Pins
 int directionPinRight = 2;
 int directionPinLeft = 7;
 int pwmPin = 5;
@@ -17,7 +17,7 @@ int echo3 = 12;
 int LEFT = 3;
 int RIGHT = 2;
 int STRAIGHT = 1;
-int OBSTACLE_CLOSE = 20;
+int OBSTACLE_CLOSE = 6;
 float straightDistance = 0, rightDistance = 0, leftDistance = 0;
 
 void setup() {
@@ -61,8 +61,7 @@ void loop() {
       }
     }
 }
-  
-  
+
 void inchesToTravel(int x) {
   
   return;
@@ -79,14 +78,14 @@ void GoStraight() {
 void RightTurn90() {
   digitalWrite(directionPinRight,LOW);
   digitalWrite(directionPinLeft,LOW);
-  delay(680);
+  delay(525);
   return;
 }
 
 void LeftTurn90() {
   digitalWrite(directionPinRight,HIGH);
   digitalWrite(directionPinLeft,HIGH);
-  delay(680);
+  delay(525);
   return;
 }
 void TurnOnWheels () {
@@ -121,7 +120,6 @@ double GetDistance(int directions) {
  
   //Serial.println(distance);
   }
-  
   else if (directions == RIGHT) {
   digitalWrite(trigger2,LOW);
   
@@ -154,3 +152,4 @@ double GetDistance(int directions) {
   return distance;
 
 }
+
